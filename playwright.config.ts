@@ -32,7 +32,7 @@ const config: PlaywrightTestConfig = {
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   //npx allure generate allure-results --clean && npx allure open
   // if headless is set to true the report won't be generated
-  reporter: [['allure-playwright'], ['line'], ['html']],
+  reporter: [['allure-playwright', { outputFolder: "test-results" }], ['line'], ['html']],
 
   globalSetup: require.resolve('./utils/global-setup'),
 
